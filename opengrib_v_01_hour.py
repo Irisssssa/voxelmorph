@@ -59,19 +59,7 @@ def CropH5(file_paths):
         data_index_fixed = 0   # Record the index of data for fixed.h5
 
         for i, file_path in enumerate(file_paths):
-            # with h5py.File(file_path, 'r') as file:
-            #     print(f'Processing {file_path}...')
-            #     fields_dataset = file['fields']
-            #     fields_data = fields_dataset[:]
-            #
-            # start_row = (fields_data.shape[0] - 1052) // 2
-            # start_col = (fields_data.shape[1] - 1788) // 2
-            # end_row = start_row + 1052
-            # end_col = start_col + 1788
-            #
-            # # Crop the fields_data to the center
-            # fields_data = fields_data[start_row:end_row, start_col:end_col]
-
+           
             #creating 01-error-correcting dateset
             if 'f01' in file_path :
                 moving_name_split = os.path.basename(file_path).split('.')
